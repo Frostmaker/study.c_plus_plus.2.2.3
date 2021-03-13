@@ -47,6 +47,34 @@ bool Date::operator>=(const Date& other)
 		return true;
 }
 
+Date Date::operator++()
+{
+	++(this->d);
+
+	return *this;
+}
+
+Date Date::operator--()
+{
+	--(this->d);
+
+	return *this;
+}
+
+Date Date::operator++(int)
+{
+	Date temp = *this;
+	++(this->d);
+	return temp;
+}
+
+Date Date::operator--(int)
+{
+	Date temp = *this;
+	--(this->d);
+	return temp;
+}
+
 bool Date::operator<(const Date& other)
 {
 	if (y >= other.y)

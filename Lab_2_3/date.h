@@ -16,6 +16,10 @@ public:
 	bool operator> (const Date& other);
 	bool operator>= (const Date& other);
 
+	Date operator++ ();
+	Date operator++ (int);
+	Date operator-- ();
+	Date operator-- (int);
 
 	friend std::ostream& operator<<(std::ostream& os, const Date& dt);
 	friend std::istream& operator>>(std::istream& os, Date& dt);
