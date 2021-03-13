@@ -54,6 +54,38 @@ bool Fract::operator!=(const Fract& other)
 	return !(*this == other);
 }
 
+bool Fract::operator>(const Fract& other)
+{
+	if (this->numen * other.denom > other.numen * this->denom)
+		return true;
+	else
+		return false;
+}
+
+bool Fract::operator>=(const Fract& other)
+{
+	if (this->numen * other.denom >= other.numen * this->denom)
+		return true;
+	else
+		return false;
+}
+
+bool Fract::operator<(const Fract& other)
+{
+	if (this->numen * other.denom < other.numen * this->denom)
+		return true;
+	else
+		return false;
+}
+
+bool Fract::operator<=(const Fract& other)
+{
+	if (this->numen * other.denom <= other.numen * this->denom)
+		return true;
+	else
+		return false;
+}
+
 
 std::ostream& operator<<(std::ostream& os, const Fract& fr)
 {

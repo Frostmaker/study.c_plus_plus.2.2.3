@@ -25,7 +25,12 @@ int main() {
 	cout << "f1 not equal f2 - " << (f1 != f2) << endl;
 	cout << "f1 not equal f5 - " << (f1 != f5) << endl;
 
-
+	Fract f6(1, -2), f7(-1, 2);
+	cout << "f7 equal f6 - " << (f7 == f6) << endl;
+	cout << "f6 < f7 - " << (f6 < f7) << endl;
+	cout << "f6 <= f7 - " << (f6 <= f7) << endl;
+	cout << "f6 > f3 - " << (f6 > f3) << endl;
+	cout << "f6 >= f7 - " << (f6 >= f7) << endl;
 
 
 
