@@ -73,8 +73,32 @@ int main() {
 		Date d1;
 		Date d2(1, 12, 2022);
 		cout << d1 << '\n' << d2 << '\n';
-		
+		cout << "Enter first date: ";
+		Date d3, d4;
+		cin >> d3;
+		cout << "Enter second date: ";
+		cin >> d4;
 
+		cout << "d1 == d2 - " << (d3 == d4) << endl;
+		cout << "d1 != d2 - " << (d3 != d4) << endl;
+		cout << "d1 < d2 - " << (d3 < d4) << endl;
+		cout << "d1 > d2 - " << (d3 > d4) << endl;
+		cout << "d1 >= d2 - " << (d3 >= d4) << endl;
+		cout << "d1 <= d2 - " << (d3 <= d4) << endl;
+
+		cout << d3 << " | ";
+		cout << ++d3 << " | ";
+		cout << d3 << " | ";
+		cout << d3++ << " | ";
+		cout << d3 << endl;
+
+		cout << d4 << " | ";
+		cout << --d4 << " | ";
+		cout << d4 << " | ";
+		cout << d4-- << " | ";
+		cout << d4 << endl;
+
+		break;
 	}
 	default:
 		cout << "Enter \"1\" or \"2\" number!";

@@ -11,13 +11,25 @@ bool Date::operator!=(const Date& other)
 	return !(*this == other);
 }
 
+bool Date::operator<(const Date& other)
+{
+	if (y < other.y)
+		return true;
+	else if (m < other.m)
+		return true;
+	else if (d < other.d)
+		return true;
+	else
+		return false;
+}
+
 bool Date::operator<=(const Date& other)
 {
 	if (y > other.y)
 		return false;
 	else if (m > other.m)
 		return false;
-	else if (d > other.m)
+	else if (d > other.d)
 		return false;
 	else
 		return true;
@@ -25,14 +37,14 @@ bool Date::operator<=(const Date& other)
 
 bool Date::operator>(const Date& other)
 {
-	if (y <= other.y)
-		return false;
-	else if (m <= other.m)
-		return false;
-	else if (d <= other.m)
-		return false;
-	else
+	if (y > other.y)
 		return true;
+	else if (m > other.m)
+		return true;
+	else if (d > other.d)
+		return true;
+	else
+		return false;
 }
 
 bool Date::operator>=(const Date& other)
@@ -41,7 +53,7 @@ bool Date::operator>=(const Date& other)
 		return false;
 	else if (m < other.m)
 		return false;
-	else if (d < other.m)
+	else if (d < other.d)
 		return false;
 	else
 		return true;
@@ -49,14 +61,14 @@ bool Date::operator>=(const Date& other)
 
 Date Date::operator++()
 {
-	++(this->d);
+	this->d = ++(this->d);
 
 	return *this;
 }
 
 Date Date::operator--()
 {
-	--(this->d);
+	this->d = --(this->d);
 
 	return *this;
 }
@@ -73,18 +85,6 @@ Date Date::operator--(int)
 	Date temp = *this;
 	--(this->d);
 	return temp;
-}
-
-bool Date::operator<(const Date& other)
-{
-	if (y >= other.y)
-		return false;
-	else if (m >= other.m)
-		return false;
-	else if (d >= other.m)
-		return false;
-	else
-		return true;
 }
 
 std::ostream& operator<<(std::ostream& os, const Date& dt)
