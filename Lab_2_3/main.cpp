@@ -19,6 +19,11 @@ int main() {
 	cout << "f1 * f1 = " << res << endl;
 	res = f3 / f2;
 	cout << "f3 / f2 = " << res << endl;
+	Fract f5(2, 3);
+	cout << "f1 equal f5 - " << (f1 == f5) << endl;
+	cout << "f1 equal f2 - " << (f1 == f2) << endl;
+	cout << "f1 not equal f2 - " << (f1 != f2) << endl;
+	cout << "f1 not equal f5 - " << (f1 != f5) << endl;
 
 
 

@@ -16,8 +16,8 @@ public:
 	Fract operator* (const Fract& other);
 	Fract operator/ (const Fract& other);
 
-	//bool operator== (const Fract& other);
-	//bool operator!= (const Fract& other);
+	bool operator== (const Fract& other);
+	bool operator!= (const Fract& other);
 	//bool operator> (const Fract& other);
 	//bool operator>= (const Fract& other);
 	//bool operator< (const Fract& other);

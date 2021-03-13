@@ -39,6 +39,22 @@ Fract Fract::operator/(const Fract& other)
 }
 
 
+bool Fract::operator==(const Fract& other)
+{
+	if (numen == other.numen && denom == other.denom)
+		return true;
+	else
+		return false;
+}
+
+
+bool Fract::operator!=(const Fract& other)
+{
+
+	return !(*this == other);
+}
+
+
 std::ostream& operator<<(std::ostream& os, const Fract& fr)
 {
 	os << fr.numen << " / " << fr.denom;
@@ -48,6 +64,7 @@ std::ostream& operator<<(std::ostream& os, const Fract& fr)
 
 std::istream& operator>>(std::istream& os, const Fract& fr)
 {
-	os >> fr.numen >> fr.denom;
+	os >> fr.numen;
+	os >> fr.denom;
 	return os;
 }
