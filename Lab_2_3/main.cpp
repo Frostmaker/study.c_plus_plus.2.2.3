@@ -49,10 +49,22 @@ int main() {
 		sum = sum + f2;
 		sum = sum + f3;
 		cout << "f1 + f2 + f3 = " << sum << endl;
-		//cout << "Enter f4: ";
-		//Fract f4;
-		//cin >> f4;
-		//cout << "f4 = " << f4 << endl;
+		cout << "Enter f4: ";
+		Fract f4;
+		try
+		{
+			cin >> f4;
+		}
+		catch (int)
+		{
+			cout << "division by zero" << endl;
+		}
+		//catch (char* err)
+		//{
+		//	cout << err << endl;
+		//}
+		// TODO: The fraction is still rewritten even if there is an error. What to do?
+		cout << "f4 = " << f4 << endl;
 		break;
 	}
 	case 2:

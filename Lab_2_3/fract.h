@@ -31,6 +31,6 @@ public:
 	bool operator<= (const Fract& other);
 
 	friend std::ostream& operator<< (std::ostream&, const Fract&);
-	friend std::istream& operator>> (std::istream&, const Fract&);
+	friend std::istream& operator>> (std::istream&, Fract&);
 
 };

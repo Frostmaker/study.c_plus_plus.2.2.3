@@ -64,3 +64,11 @@ std::ostream& operator<<(std::ostream& os, const Date& dt)
 	os << dt.d << '.' << dt.m << '.' << dt.y;
 	return os;
 }
+
+std::istream& operator>>(std::istream& os, Date& dt)
+{
+	os >> dt.d;
+	os >> dt.m;
+	os >> dt.y;
+	return os;
+}

@@ -94,9 +94,15 @@ std::ostream& operator<<(std::ostream& os, const Fract& fr)
 }
 
 
-std::istream& operator>>(std::istream& os, const Fract& fr)
+std::istream& operator>>(std::istream& os, Fract& fr)
 {
 	os >> fr.numen;
 	os >> fr.denom;
+	if (fr.denom == 0)
+		throw - 1;
+	if (fr.denom < 0) {
+		fr.numen = -fr.numen;
+		fr.denom = -fr.denom;
+	}
 	return os;
 }

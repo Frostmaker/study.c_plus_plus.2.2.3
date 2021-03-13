@@ -18,4 +18,5 @@ public:
 
 
 	friend std::ostream& operator<<(std::ostream& os, const Date& dt);
+	friend std::istream& operator>>(std::istream& os, Date& dt);
 };
